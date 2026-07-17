@@ -36,6 +36,24 @@ While this pipeline solves the *structural* problems of PDF parsing, it cannot f
    ```
    All of your fresh CVs will be automatically generated and versioned in their respective `pdf-output`, `md-output`, `txt-output`, and `html-output-static` folders!
 
+## 📁 Generated Outputs & Formats
+
+When you run the build (or trigger the GitHub Release), the pipeline generates artifacts into grouped folders organized by month and year (e.g., `Jul2026`). 
+
+You will notice that the HTML and PDF outputs come in two distinct variants:
+
+1. **Standard Variant** (e.g., `JaneDoe_CV_Jul2026_v1.pdf`)
+   - **What it is:** The primary, streamlined version of your CV.
+   - **Why we made it:** This hides the often massive wall of "Key Skills" tags from the visual document. It forces human reviewers to focus strictly on your chronological work experience and achievements. Because the skills are still embedded in the invisible `schema.org` JSON-LD metadata, ATS parsers will still successfully extract all your keywords without bloating the visual page count.
+
+2. **Skills Variant** (e.g., `JaneDoe_CV_Jul2026_v1_s.pdf` - Note the `_s` suffix)
+   - **What it is:** The exact same CV, but with a highly visible "Key Skills" section injected at the top.
+   - **Why we made it:** Some older ATS parsers still rely heavily on OCR or visual text scraping rather than metadata, and some specific recruiters explicitly request a visible skills matrix. This variant ensures you have a visually complete fallback if requested.
+
+In addition to the PDFs and HTML bundles, you will also receive:
+- **`.md` (Markdown)**: A beautifully formatted, lightweight text file perfect for pasting into internal GitHub/GitLab wikis or developer portals.
+- **`.txt` (Plain Text)**: The rawest possible fallback. Essential for copying and pasting into those dreaded corporate job portals that force you to paste your resume into a tiny unformatted `<textarea>`.
+
 ## 🎨 Customizing the Design
 
 The HTML viewer and PDF generator use a highly polished Glassmorphism aesthetic. 
