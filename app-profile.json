@@ -11,8 +11,8 @@
       "given": "Jane",
       "family": "Doe"
     },
-    "headline": "Senior Product Manager | Technical Lead",
-    "summary": "This is a placeholder summary. Replace this with your own professional summary outlining your experience, achievements, and career objectives.",
+    "headline": "Principal Product Manager & AI Strategist",
+    "summary": "A seasoned product leader with over a decade of experience driving AI-powered enterprise solutions from 0-to-1. Recognized for bridging the gap between deep technical engineering teams and high-level business strategy. Passionate about ethical AI, scalable cloud infrastructure, and building high-performing, cross-functional teams that deliver measurable user value.",
     "location": {
       "country": "US",
       "region": "California",
@@ -21,44 +21,97 @@
     },
     "contact": {
       "email": "jane.doe@example.com",
-      "phone": "+1 555 0100",
+      "phone": "+1 (555) 019-2834",
       "website": "https://janedoe.com",
       "social": [
         {
           "label": "LinkedIn",
           "url": "https://www.linkedin.com/in/janedoe"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/janedoe"
         }
       ]
     }
   },
   "experience": [
     {
-      "role": "Senior Product Manager",
+      "role": "Principal Product Manager, AI Platforms",
       "organization": {
-        "name": "Tech Corp"
+        "name": "NexusTech Enterprises"
       },
-      "start": "2020-01",
+      "start": "2022-03",
       "end": "",
       "employmentType": "Full-time",
       "highlights": [
-        "Led cross-functional teams to deliver highly scalable cloud solutions.",
-        "Increased user engagement by 40% over two quarters.",
-        "Managed an annual budget of $2M."
+        "Spearheaded the launch of 'NexusBrain', an enterprise generative AI platform that reduced customer support triage times by 65%.",
+        "Managed a $5M annual engineering budget and a cross-functional team of 24 engineers, data scientists, and designers.",
+        "Negotiated strategic API partnerships with OpenAI and Anthropic, unlocking a new B2B revenue stream projected at $12M ARR."
       ],
       "technologies": [
-        "AWS",
+        "LLMs",
+        "Python",
+        "AWS Bedrock",
+        "Kubernetes"
+      ]
+    },
+    {
+      "role": "Senior Product Manager",
+      "organization": {
+        "name": "Globex Cloud Solutions"
+      },
+      "start": "2018-06",
+      "end": "2022-02",
+      "employmentType": "Full-time",
+      "highlights": [
+        "Led the migration of 400+ legacy enterprise clients to the new SaaS architecture, achieving zero data loss and 99.99% uptime.",
+        "Implemented continuous discovery habits, conducting over 100 user interviews to redefine the product roadmap.",
+        "Increased core product retention from 72% to 89% by introducing proactive analytics dashboards for enterprise admins."
+      ],
+      "technologies": [
         "React",
-        "Node.js"
+        "Node.js",
+        "Snowflake",
+        "Figma"
+      ]
+    },
+    {
+      "role": "Product Manager",
+      "organization": {
+        "name": "Stark Industries (Tech Division)"
+      },
+      "start": "2015-01",
+      "end": "2018-05",
+      "employmentType": "Full-time",
+      "highlights": [
+        "Owned the end-to-end delivery of the flagship mobile application (iOS & Android), reaching 1M+ active monthly users.",
+        "Established the company's first formal Agile framework, reducing sprint cycle time by 15%.",
+        "Collaborated closely with marketing to execute a highly successful launch campaign featured in TechCrunch."
+      ],
+      "technologies": [
+        "Swift",
+        "Kotlin",
+        "Jira",
+        "Google Analytics"
       ]
     }
   ],
   "education": [
     {
-      "institution": "University of Technology",
+      "institution": "Stanford University",
+      "degree": "MSc",
+      "area": "Management Science and Engineering",
+      "start": "2013",
+      "end": "2015",
+      "completed": true
+    },
+    {
+      "institution": "University of California, Berkeley",
       "degree": "BSc",
       "area": "Computer Science",
-      "start": "2015",
-      "end": "2019",
+      "start": "2009",
+      "end": "2013",
       "completed": true
     }
   ],
@@ -67,15 +120,56 @@
       "name": "Product Strategy",
       "keywords": [
         "Roadmapping",
-        "Market Analysis",
-        "A/B Testing"
+        "GTM Strategy",
+        "Pricing & Packaging",
+        "Competitive Analysis",
+        "OKRs"
+      ]
+    },
+    {
+      "name": "Technical & AI",
+      "keywords": [
+        "Prompt Engineering",
+        "System Architecture",
+        "REST APIs",
+        "SQL",
+        "Cloud Computing (AWS/GCP)"
+      ]
+    },
+    {
+      "name": "Agile & Operations",
+      "keywords": [
+        "Scrum / Kanban",
+        "Sprint Planning",
+        "Jira Administration",
+        "Cross-functional Leadership"
+      ]
+    },
+    {
+      "name": "User Experience",
+      "keywords": [
+        "Continuous Discovery",
+        "A/B Testing",
+        "Wireframing (Figma)",
+        "User Personas"
       ]
     }
   ],
   "credentials": [
     {
-      "name": "Certified Scrum Master",
-      "issuer": "Scrum Alliance"
+      "name": "Certified Scrum Product Owner (CSPO)",
+      "issuer": "Scrum Alliance",
+      "date": "2019-04"
+    },
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "date": "2021-08"
+    },
+    {
+      "name": "Pragmatic Marketing Certified (PMC-III)",
+      "issuer": "Pragmatic Institute",
+      "date": "2017-11"
     }
   ],
   "preferences": {
