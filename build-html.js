@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 function getNextVersion(outputDir) {
+    if (process.env.GITHUB_RUN_NUMBER) {
+        return parseInt(process.env.GITHUB_RUN_NUMBER);
+    }
     if (!fs.existsSync(outputDir)) return 1;
     const files = fs.readdirSync(outputDir);
     const versions = files

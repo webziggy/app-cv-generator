@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('showSkills') === 'false') {
+        window.showSkills = false;
+    }
     try {
         const response = await fetch('app-profile.json');
         if (!response.ok) throw new Error('Network response was not ok');

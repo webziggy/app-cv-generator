@@ -106,6 +106,9 @@ async function build() {
     }
     
     function getNextVersion(dir) {
+        if (process.env.GITHUB_RUN_NUMBER) {
+            return parseInt(process.env.GITHUB_RUN_NUMBER);
+        }
         let version = 1;
         while (
             fs.existsSync(`${dir}/${prefix}_${monthYear}_v${version}.pdf`) || 

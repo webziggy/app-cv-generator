@@ -19,8 +19,12 @@ const prefix = `${firstName}${lastName}_CV`;
     }
 
     let version = 1;
-    while (fs.existsSync(`${outputDir}/${prefix}_${monthYear}_v${version}.txt`)) {
-        version++;
+    if (process.env.GITHUB_RUN_NUMBER) {
+        version = parseInt(process.env.GITHUB_RUN_NUMBER);
+    } else {
+        while (fs.existsSync(`${outputDir}/${prefix}_${monthYear}_v${version}.txt`)) {
+            version++;
+        }
     }
     const txtPath = path.join(outputDir, `${prefix}_${monthYear}_v${version}.txt`);
 
