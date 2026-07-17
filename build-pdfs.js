@@ -7,7 +7,7 @@ const PORT = 8081;
 
 // 1. Create a simple static HTTP server
 const server = http.createServer((req, res) => {
-    let filePath = '.' + req.url;
+    let filePath = '.' + req.url.split('?')[0];
     if (filePath === './') filePath = './index.html';
 
     const extname = path.extname(filePath);
@@ -134,7 +134,7 @@ async function build() {
 
     // 5. Generate PDF WITHOUT Skills
     console.log(`Generating ${noSkillsPdf}...`);
-    await page.goto(`http://localhost:${PORT}/index-noskills.html`, { waitUntil: 'networkidle0' });
+    await page.goto(`http://localhost:${PORT}/index.html?showSkills=false`, { waitUntil: 'networkidle0' });
     await page.pdf({ 
         path: noSkillsPdf, 
         format: 'A4', 
@@ -151,7 +151,7 @@ async function build() {
     
     // Injecting into XMP-dc:Source to avoid clobbering the standard PDF Subject/Description field
     // We also explicitly set Title, Author, and Subject, and wipe the Skia/Puppeteer Producer tags for a cleaner file
-    const exifFlags = '-Title="Alan Ogilvie - CV" -Author="Alan Ogilvie" -Subject="Curriculum Vitae" -Creator="" -Producer=""';
+    const exifFlags = `-Title="${cvData.basics.name.given} ${cvData.basics.name.family} - CV" -Author="${cvData.basics.name.given} ${cvData.basics.name.family}" -Subject="Curriculum Vitae" -Creator="" -Producer=""`;
     
     execSync(`exiftool "-XMP-dc:Source<=temp.xmp" ${exifFlags} -overwrite_original "${skillsPdf}"`);
     execSync(`exiftool "-XMP-dc:Source<=temp.xmp" ${exifFlags} -overwrite_original "${noSkillsPdf}"`);
