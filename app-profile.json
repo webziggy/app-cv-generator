@@ -1,0 +1,91 @@
+{
+  "protocol": {
+    "name": "ApplicantProfileProtocol",
+    "shortName": "APP",
+    "version": "1.0.0",
+    "uri": "https://app-protocol.org/spec/1.0",
+    "id": "urn:app-protocol:profile:dummy-id"
+  },
+  "basics": {
+    "name": {
+      "given": "Jane",
+      "family": "Doe"
+    },
+    "headline": "Senior Product Manager | Tech Lead",
+    "summary": "This is a placeholder summary. Replace this with your own professional summary outlining your experience, achievements, and career objectives.",
+    "location": {
+      "country": "US",
+      "region": "California",
+      "city": "San Francisco",
+      "remote": true
+    },
+    "contact": {
+      "email": "jane.doe@example.com",
+      "phone": "+1 555 0100",
+      "website": "https://janedoe.com",
+      "social": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/janedoe"
+        }
+      ]
+    }
+  },
+  "experience": [
+    {
+      "role": "Senior Product Manager",
+      "organization": {
+        "name": "Tech Corp"
+      },
+      "start": "2020-01",
+      "end": "",
+      "employmentType": "Full-time",
+      "highlights": [
+        "Led cross-functional teams to deliver highly scalable cloud solutions.",
+        "Increased user engagement by 40% over two quarters.",
+        "Managed an annual budget of $2M."
+      ],
+      "technologies": [
+        "AWS",
+        "React",
+        "Node.js"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Technology",
+      "degree": "BSc",
+      "area": "Computer Science",
+      "start": "2015",
+      "end": "2019",
+      "completed": true
+    }
+  ],
+  "skills": [
+    {
+      "name": "Product Strategy",
+      "keywords": [
+        "Roadmapping",
+        "Market Analysis",
+        "A/B Testing"
+      ]
+    }
+  ],
+  "credentials": [
+    {
+      "name": "Certified Scrum Master",
+      "issuer": "Scrum Alliance"
+    }
+  ],
+  "preferences": {
+    "employmentType": ["Full-time"],
+    "workMode": ["Hybrid", "Remote"],
+    "relocation": false
+  },
+  "metadata": {
+    "created": "2026-07-17T00:00:00.000Z",
+    "updated": "2026-07-17T00:00:00.000Z",
+    "source": "SelfReported"
+  }
+}

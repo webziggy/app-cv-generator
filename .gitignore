@@ -1,0 +1,12 @@
+node_modules/
+pdf-output/
+md-output/
+txt-output/
+html-output-static/
+*.pdf
+*.md
+*.txt
+*.html
+*.jsonld
+!index.html
+!README.md
