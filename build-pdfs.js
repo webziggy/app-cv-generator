@@ -1,4 +1,3 @@
-const puppeteer = require('puppeteer');
 const { execSync, spawn } = require('child_process');
 const http = require('http');
 const fs = require('fs');
@@ -91,7 +90,8 @@ async function build() {
 
     // 3. Launch Puppeteer
     console.log('Launching Puppeteer...');
-    const browser = await puppeteer.launch();
+    const puppeteer = (await import('puppeteer')).default;
+    const browser = await puppeteer.launch({ headless: 'new', args: ['--no-sandbox'] });
     const page = await browser.newPage();
 
     // 4. Generate PDF WITH Skills
