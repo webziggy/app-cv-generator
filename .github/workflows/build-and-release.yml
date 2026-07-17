@@ -1,0 +1,49 @@
+name: Build and Release CV Artifacts
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - 'app-profile.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install ExifTool
+        run: sudo apt-get update && sudo apt-get install -y libimage-exiftool-perl
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Generate Artifacts
+        run: node build.js
+
+      - name: Create Release and Upload Assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Create a dynamic tag based on date and run number
+          TAG_NAME="release-$(date +'%Y%m%d')-${GITHUB_RUN_NUMBER}"
+          
+          # Create release
+          gh release create "$TAG_NAME" \
+            --title "Automated CV Build ($TAG_NAME)" \
+            --notes "Generated automatically by GitHub Actions."
+
+          # Upload everything from output folders
+          gh release upload "$TAG_NAME" pdf-output/*/* md-output/*/* txt-output/*/* html-output-static/*/*
